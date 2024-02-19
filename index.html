@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store</title>
+    <link rel="stylesheet" href="/main.css">
+    <script src="https://kit.fontawesome.com/ff037c2c2d.js" crossorigin="anonymous"></script>
+    <script>
+        let quantity = 1; // Initial quantity value, change it as needed
+
+        function incrementQuantity() {
+            quantity++;
+            updateQuantityDisplay();
+        }
+
+        function decrementQuantity() {
+            if (quantity > 1) {
+                quantity--;
+                updateQuantityDisplay();
+            }
+        }
+
+        function updateQuantityDisplay() {
+            // Assuming you have a span to display the quantity, update it with the current value
+            document.getElementById('quantity-display').innerText = quantity;
+        }
+    </script>
+
+</head>
+
+<body class="bg-slate-50 text-black font-sans selection:bg-emerald-900 selection:text-white ">
+    <div class="max-w-full ">
+        <!-- <img src="/Grocery Store/back.jpg" class="absolute"> -->
+
+        <nav class="flex text-white z-10  px-16 py-1 group justify-between w-full items-center bg-emerald-950">
+            <img src="/Grocery Store/logo.png" alt="" class="w-40">
+            <ul class="flex space-x-10 items-center">
+                <li class="cursor-pointer hover:text-orange-400">Home</li>
+                <li class="cursor-pointer hover:text-orange-400">About</li>
+                <li class="cursor-pointer hover:text-orange-400">Features</li>
+                <li class="cursor-pointer hover:text-orange-400">Contact</li>
+            </ul>
+            <div class=" ">
+                <i class="fa-solid fa-bag-shopping cursor-pointer" style="color: #ffffff;"></i>
+            </div>
+        </nav>
+
+
+        <div class="flex px-16">
+
+            <div class="mt-36">
+                <div class="text-black mt-10  text-5xl max-w-1xl font-bold leading-none space-x-4">
+                    <!-- Adjust the top value as needed -->
+                    <h1>Groceries <br> delivery in <span class="font-light">15 mins</span></h1>
+                </div>
+                <div style="top:100px;" class="text-black py-24 max-w-2xl border-none pt-3 pb-0 ">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis natus <br>id nobis ad impedit
+                        non
+                        enim
+                        velit officiis</p>
+                </div>
+
+                <div class=" py-8 ">
+                    <button
+                        class="text-black   max-w-md pt-2 pb-2 px-8 border-solid border-2 border-gray-200 rounded-full bg-white hover:bg-emerald-950 hover:text-white transition 200 ">Order
+                        Now</button>
+                    <button class="text-black max-w-md pt-2 pb-2 ml-7 pr-0 ">Download app </button>
+                    <i class="fa-solid fa-download" style="color: black;"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class=" w-96 h-80 relative mt-9 ml-60 ">
+                <img src="/Grocery Store/man.png" alt="" class="flex absolute">
+            </div>
+
+        </div>
+
+        <div class="flex justify-center items-center mt-20 justify-around px-10 gap-5 ml-14">
+            <div class="flex  transition-all duration-200 hover:scale-110 cursor-pointer">
+                <img src="/icons/icons8-dustbin-64.png" alt="" class="w-10 mr-3">
+                <p>Product from <br> organic farm</p>
+
+            </div>
+            <div class="flex transition-all duration-200 hover:scale-110 cursor-pointer ">
+                <img src="/icons/icons8-home-delivery-60.png" alt="" class="w-10  mr-3">
+                <p>Free home <br> delivery</p>
+            </div>
+            <div class="flex  transition-all duration-200 hover:scale-110 cursor-pointer">
+                <img src="/icons/icons8-basket-48.png" alt="" class="w-10 mr-3">
+                <p>Promotion of the <br> week</p>
+            </div>
+            <div class="flex  transition-all duration-200 hover:scale-110 cursor-pointer">
+                <img src="/icons/discount.png" alt="" class="w-10 space-x-5 mr-3">
+                <p>20% discount on <br> all vegetables</p>
+            </div>
+
+
+            <div class="border "></div>
+
+        </div>
+
+        <div class="flex justify-between px-16 mt-20">
+            <div>
+                <p class="font-bold text-4xl">Browser our Hottest <br> <span class="text-blue-300">Categories</span></p>
+            </div>
+
+            <div>
+                <button
+                    class="button text-center relative bg-transparent text-black w-36 h-10 border-2 border-gray-200 rounded-md transition-all duration-600 ease-in-out hover:bg-emerald-950 hover:text-white hover:cursor-pointer hover:border-black">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6 absolute translate-x-0 transition-all duration-600 ease-in-out">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                    </svg>
+
+                    <div class="text ml-0">
+                        See All
+                    </div>
+
+                </button>
+
+            </div>
+        </div>
+
+        <div class="flex text-black justify-evenly mt-20 items-center aspect-auto relative aspect-auto">
+            <div
+                class="bg-white w-48 h-64 p-10 border-solid border-2 border-gray-200 rounded-xl transition duration-200 ease-in-out hover:scale-110 hover:bg-blue-300 hover:border-black cursor-pointer ">
+                <img src="/icons/fruits.png" alt="" class="w-36 h-36 ">
+                <h2 class="font-bold text-center">Fruits</h2>
+                <h6 class="font-extralight text-center">(22 items)</h6>
+                <!-- <i
+                    class="fa-solid fa-arrow-right fa-2x p-2 pt-0  border-blue-700 hover:bg-orange-400 rounded-full hidden text-center ml-7"></i> -->
+            </div>
+            <div
+                class="bg-white w-48 h-64 p-10 border-solid border-2 border-gray-200 rounded-xl transition duration-200 ease-in-out hover:scale-110 hover:bg-blue-300 hover:border-black cursor-pointer">
+                <img src="/icons/veg.png" alt="" class="w-36 h-32 mb-6">
+                <h2 class="font-bold text-center">Vegetables</h2>
+                <h6 class="font-extralight text-center">(22 items)</h6>
+                <!-- <i
+                    class="fa-solid fa-arrow-right fa-2x p-2 pt-0  border-blue-700 hover:bg-orange-400 rounded-full hidden text-center ml-7"></i> -->
+            </div>
+            <div
+                class="bg-white w-48 h-64 p-10 border-solid border-2 border-gray-200 rounded-xl transition duration-200 ease-in-out hover:scale-110 hover:bg-blue-300 hover:border-black cursor-pointer">
+                <img src="/icons/drinks.png" alt="" class="w-36 h-36">
+                <h2 class="font-bold text-center">Drinks</h2>
+                <h6 class="font-extralight text-center">(22 items)</h6>
+                <!-- <i
+                    class="fa-solid fa-arrow-right fa-2x p-2 pt-0  border-blue-700 hover:bg-orange-400 rounded-full hidden text-center ml-7"></i> -->
+            </div>
+            <div
+                class="bg-white w-48 h-64 p-10 border-solid border-2 border-gray-200 rounded-xl transition duration-200 ease-in-out hover:scale-110 hover:bg-blue-300 hover:border-black cursor-pointer">
+                <img src="/icons/spices-png-photo-3.png" alt="" class="w-36 h-36">
+                <h2 class="font-bold text-center">Spices</h2>
+                <h6 class="font-extralight text-center">(22 items)</h6>
+                <!-- <i
+                    class="fa-solid fa-arrow-right fa-2x p-2 pt-0  border-blue-700 hover:bg-orange-400 rounded-full hidden text-center ml-7"></i> -->
+
+            </div>
+        </div>
+
+
+
+
+        <div class="flex px-16 justify-between gap-5 mt-10">
+
+
+            <div class="flex items-center mt-20  border-white rounded-xl bg-green-500  justify-between h-56 w-96">
+                <div class=" ml-12">
+                    <p class="font-light text-xs">UPTO 20% OFF</p>
+                    <p class="font-bold text-xl">Collected <br> From <br> Gardens</p>
+                    <button class="text-black mt-5 border-white rounded-full py-2 px-4 bg-white hover:bg-gray-100">See
+                        All</button>
+                </div>
+                <div class="ml-7">
+                    <img src="/icons/girl.png" alt="" class="h-56 w-64">
+                </div>
+            </div>
+
+            <div
+                class="flex items-center mt-20 text-black  border-white rounded-xl bg-green-300  justify-between h-56 w-96">
+                <div class=" ml-12">
+                    <p class="font-light text-xs">UPTO 20% OFF</p>
+                    <p class="font-bold text-xl">Change <br> your <br> Diet plan</p>
+                    <button class="text-black mt-5 border-white rounded-full py-2 px-4 bg-white hover:bg-gray-100">See
+                        All</button>
+                </div>
+                <div class="mr-5">
+                    <img src="/icons/oraganic.png" alt="" class="h-56 w-40">
+                </div>
+            </div>
+
+            <div class="flex items-center mt-20  border-white rounded-xl bg-orange-400  justify-between h-56 w-96">
+                <div class=" ml-12">
+                    <p class="font-light text-xs">UPTO 20% OFF</p>
+                    <p class="font-bold text-xl">Vegetable <br> 100% <br> Oraganic</p>
+                    <button class="text-black mt-5 border-white rounded-full py-2 px-4 bg-white hover:bg-gray-100">See
+                        All</button>
+                </div>
+                <div class="ml-7">
+                    <img src="/icons/juice.png" alt="" class="h-56 w-64">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="flex px-16 justify-between mt-16">
+            <div>
+                <h1 class="font-bold text-4xl">Best Selling Products</h1>
+            </div>
+            <div>
+                <i
+                    class="fa-solid fa-arrow-left p-3 border-solid border-2 border-gray-200 rounded-full hover:bg-emerald-900 hover:text-white cursor-pointer"></i>
+                <i
+                    class="fa-solid fa-arrow-right  p-3 border-solid border-2 border-gray-200 rounded-full hover:bg-emerald-900 hover:text-white cursor-pointer"></i>
+            </div>
+        </div>
+        <div class="px-16 mt-12 relative flex justify-evenly">
+            <div class="h-80 w-56 border-solid border-2 border-gray-200 rounded-lg flex justify-between">
+
+
+                <img src="icons/25-Discount-PNG.png" alt="" class="h-7 w-10 mt-3">
+
+                <i class="fa-solid fa-heart fa-1x mt-3 mr-4 cursor-pointer" style="color: #f20202;"></i>
+
+
+                <img src="/icons/tomato-15523.png" alt="" class="absolute h-36 w-36 ml-10 mt-7 ">
+
+
+
+
+                <div class="absolute bottom-3 px-5 mt-3">
+                    <p class="font-light">Vegetables</p>
+                    <h2 class="font-bold cursor-pointer">Farm fresh organic <br> fruits 250g</h2>
+                    <h2 class="font-bold text-orange-500 mt-1 ">$7.99 <span
+                            class="font-semibold text-black text-xs">/kg</span></h2>
+
+
+
+
+
+                    <div class="mt-2 w-24  ">
+                        <button class="increment-decrement-btn bg-gray-300 text-black p-1  focus:outline-none"
+                            onclick="decrementQuantity()">-</button>
+                        <span id="quantity-display" class="font-semibold text-black text-xs mr-2">1</span>
+                        <button class="increment-decrement-btn bg-gray-300 text-black p-1  focus:outline-none"
+                            onclick="incrementQuantity()">+</button>
+
+                        <i class="fa-solid fa-cart-plus absolute right-0 h-16 cursor-pointer  "></i>
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+            <div class="h-80 w-56 border-solid border-2 border-gray-200 rounded-lg flex justify-between">
+
+
+                <img src="icons/25-Discount-PNG.png" alt="" class="h-7 w-10 mt-3">
+
+                <i class="fa-regular fa-heart fa-1x mt-3 mr-4 cursor-pointer"></i>
+
+                <img src="/icons/meat.png" alt="" class="absolute h-36 w-36 ml-7 mt-7 ">
+
+
+
+
+                <div class="absolute bottom-3 px-5 mt-3">
+                    <p class="font-light">Meat</p>
+                    <h2 class="font-bold cursor-pointer">Farm fresh organic <br> meat 1kg</h2>
+                    <h2 class="font-bold text-orange-500 mt-1 ">$11.00 <span
+                            class="font-semibold text-black text-xs">/kg</span></h2>
+
+
+
+
+
+                    <div class="mt-2 w-24  ">
+                        <button class="increment-decrement-btn bg-gray-300 text-black p-1  focus:outline-none"
+                            onclick="decrementQuantity()">-</button>
+                        <span id="quantity-display" class="font-semibold text-black text-xs mr-2">1</span>
+                        <button class="increment-decrement-btn bg-gray-300 text-black p-1  focus:outline-none"
+                            onclick="incrementQuantity()">+</button>
+
+                        <i class="fa-solid fa-cart-plus absolute right-0 h-16 cursor-pointer"></i>
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+            <div class="h-80 w-56 border-solid border-2 border-gray-200 rounded-lg flex justify-between">
+
+
+                <img src="icons/25-Discount-PNG.png" alt="" class="h-7 w-10 mt-3">
+
+                <i class="fa-regular fa-heart fa-1x mt-3 mr-4 cursor-pointer"></i>
+
+                <img src="/icons/Honey.png" alt="" class="absolute h-36 w-36 ml-8 mt-7 ">
+
+
+
+
+                <div class="absolute bottom-3 px-5 mt-3">
+                    <p class="font-light">Honey</p>
+                    <h2 class="font-bold cursor-pointer">Farm fresh organic <br> honey 500g</h2>
+                    <h2 class="font-bold text-orange-500 mt-1 ">$11.00 <span
+                            class="font-semibold text-black text-xs">/kg</span></h2>
+
+
+
+
+
+                    <div class="mt-2 w-24  ">
+                        <button class="increment-decrement-btn bg-gray-300 text-black p-1  focus:outline-none"
+                            onclick="decrementQuantity()">-</button>
+                        <span id="quantity-display" class="font-semibold text-black text-xs mr-2">1</span>
+                        <button class="increment-decrement-btn bg-gray-300 text-black p-1  focus:outline-none"
+                            onclick="incrementQuantity()">+</button>
+
+                        <i class="fa-solid fa-cart-plus absolute right-0 h-16 cursor-pointer "></i>
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+            <div class="h-80 w-56 border-solid border-2 border-gray-200 rounded-lg flex justify-between">
+
+
+                <img src="icons/25-Discount-PNG.png" alt="" class="h-7 w-10 mt-3">
+
+                <i class="fa-regular fa-heart fa-1x mt-3 mr-4 cursor-pointer"></i>
+
+                <img src="/icons/Orange.png" alt="" class="absolute h-36 w-36 ml-10 mt-7 ">
+
+
+
+
+                <div class="absolute bottom-3 px-5 mt-3">
+                    <p class="font-light">Orange</p>
+                    <h2 class="font-bold cursor-pointer">Farm fresh organic <br> orange 500g</h2>
+                    <h2 class="font-bold text-orange-500 mt-1 ">$11.00 <span
+                            class="font-semibold text-black text-xs">/kg</span></h2>
+
+
+
+
+
+                    <div class="mt-2 w-24  ">
+                        <button class="increment-decrement-btn bg-gray-300 text-black p-1  focus:outline-none"
+                            onclick="decrementQuantity()">-</button>
+                        <span id="quantity-display" class="font-semibold text-black text-xs mr-2">1</span>
+                        <button class="increment-decrement-btn bg-gray-300 text-black p-1  focus:outline-none"
+                            onclick="incrementQuantity()">+</button>
+
+                        <i class="fa-solid fa-cart-plus absolute right-0 h-16 cursor-pointer "></i>
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <div class="mt-24 h-48 bg-black w-full text-white flex flex-col justify-center items-center ">
+
+
+            <div class="px-16 relative flex justify-between text-center space-x-20">
+
+
+                <div class="flex gap-4 items-center  ">
+                    <i class="fa-solid fa-users-line fa-3x" style="color: green;"></i>
+                    <h1 class="text-3xl font-bold ">1,800<span class="text-orange-400">+</span><br>
+                        <p class="text-xs ">Satisfied Clients</p>
+                    </h1>
+
+                </div>
+
+                <div class="flex gap-4 items-center ">
+                    <i class="fa-solid fa-hands-holding-circle fa-3x" style="color: green;"></i>
+                    <h1 class="text-3xl font-bold ">362<span class="text-orange-400">+</span><br>
+                        <p class="text-xs ">Active Products</p>
+                    </h1>
+
+                </div>
+
+                <div class="flex gap-4 items-center ">
+                    <i class="fa-solid fa-bowl-food fa-3x" style="color: green;"></i>
+                    <h1 class="text-3xl font-bold ">30<span class="text-orange-400">+</span><br>
+                        <p class="text-xs ">Food Categories</p>
+                    </h1>
+
+                </div>
+
+                <div class="flex gap-4 items-center">
+                    <i class="fa-solid fa-award fa-3x" style="color: green;"></i>
+                    <h1 class="text-3xl font-bold ">1,800<span class="text-orange-400">+</span><br>
+                        <p class="text-xs ">Awards Winnig</p>
+                    </h1>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <div class="bg-gray-200 h-full">
+            <div class="">
+                <h1 class="font-bold text-3xl text-center pt-10">Most Popular <span class="text-green-600">
+                        Products</span>
+                </h1>
+            </div>
+
+
+            <nav class="px-16 text-center flex justify-center mt-8 ">
+
+                <ul class="flex space-x-10 items-center text-black font-bold">
+                    <li class="cursor-pointer px-7 py-1 border-solid border-1 rounded-full text-white bg-emerald-900 ">
+                        All</li>
+                    <li class="cursor-pointe">Vegetables</li>
+                    <li class="cursor-pointe">Meat</li>
+                    <li class="cursor-pointe">Drinks</li>
+                </ul>
+
+            </nav>
+
+            <div class="px-16 mt-12 relative flex justify-evenly">
+                <div class="h-80 w-56 border-solid border-2 border-gray-200 rounded-lg flex justify-between bg-white">
+
+
+                    <img src="icons/25-Discount-PNG.png" alt="" class="h-7 w-10 mt-3">
+
+                    <i class="fa-solid fa-heart fa-1x mt-3 mr-4 cursor-pointer" style="color: #f20202;"></i>
+
+
+                    <img src="/icons/peanuts.png" alt="" class="absolute h-36 w-36 ml-10 mt-7 ">
+
+
+
+
+                    <div class="absolute bottom-3 px-5 mt-3">
+                        <p class="font-light">Peanuts</p>
+                        <h2 class="font-bold cursor-pointer">Farm fresh organic <br> nuts 250g</h2>
+                        <h2 class="font-bold text-orange-500 mt-1 ">$7.99 <span
+                                class="font-semibold text-black text-xs">/kg</span></h2>
+
+
+
+
+
+                        <div class="mt-2 w-24  ">
+                            <button class="increment-decrement-btn bg-gray-300 text-black p-1  focus:outline-none"
+                                onclick="decrementQuantity()">-</button>
+                            <span id="quantity-display" class="font-semibold text-black text-xs mr-2">1</span>
+                            <button class="increment-decrement-btn bg-gray-300 text-black p-1  focus:outline-none"
+                                onclick="incrementQuantity()">+</button>
+
+                            <i class="fa-solid fa-cart-plus absolute right-0 h-16 cursor-pointer  "></i>
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+                <div class="h-80 w-56 border-solid border-2 border-gray-200 rounded-lg flex justify-between bg-white">
+
+
+                    <img src="icons/25-Discount-PNG.png" alt="" class="h-7 w-10 mt-3">
+
+                    <i class="fa-regular fa-heart fa-1x mt-3 mr-4 cursor-pointer"></i>
+
+                    <img src="/icons/meat.png" alt="" class="absolute h-36 w-36 ml-7 mt-7 ">
+
+
+
+
+                    <div class="absolute bottom-3 px-5 mt-3">
+                        <p class="font-light">Meat</p>
+                        <h2 class="font-bold cursor-pointer">Farm fresh organic <br> meat 1kg</h2>
+                        <h2 class="font-bold text-orange-500 mt-1 ">$11.00 <span
+                                class="font-semibold text-black text-xs">/kg</span></h2>
+
+
+
+
+
+                        <div class="mt-2 w-24  ">
+                            <button class="increment-decrement-btn bg-gray-300 text-black p-1  focus:outline-none"
+                                onclick="decrementQuantity()">-</button>
+                            <span id="quantity-display" class="font-semibold text-black text-xs mr-2">1</span>
+                            <button class="increment-decrement-btn bg-gray-300 text-black p-1  focus:outline-none"
+                                onclick="incrementQuantity()">+</button>
+
+                            <i class="fa-solid fa-cart-plus absolute right-0 h-16 cursor-pointer"></i>
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+                <div class="h-80 w-56 border-solid border-2 border-gray-200 rounded-lg flex justify-between bg-white">
+
+
+                    <img src="icons/25-Discount-PNG.png" alt="" class="h-7 w-10 mt-3">
+
+                    <i class="fa-regular fa-heart fa-1x mt-3 mr-4 cursor-pointer"></i>
+
+                    <img src="/icons/gajar.png" alt="" class="absolute h-36 w-36 ml-8 mt-7 ">
+
+
+
+
+                    <div class="absolute bottom-3 px-5 mt-3">
+                        <p class="font-light">Gajar</p>
+                        <h2 class="font-bold cursor-pointer">Farm fresh organic <br> Gajar 500g</h2>
+                        <h2 class="font-bold text-orange-500 mt-1 ">$11.00 <span
+                                class="font-semibold text-black text-xs">/kg</span></h2>
+
+
+
+
+
+                        <div class="mt-2 w-24  ">
+                            <button class="increment-decrement-btn bg-gray-300 text-black p-1  focus:outline-none"
+                                onclick="decrementQuantity()">-</button>
+                            <span id="quantity-display" class="font-semibold text-black text-xs mr-2">1</span>
+                            <button class="increment-decrement-btn bg-gray-300 text-black p-1  focus:outline-none"
+                                onclick="incrementQuantity()">+</button>
+
+                            <i class="fa-solid fa-cart-plus absolute right-0 h-16 cursor-pointer "></i>
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+                <div class="h-80 w-56 border-solid border-2 border-gray-200 rounded-lg flex justify-between bg-white">
+
+
+                    <img src="icons/25-Discount-PNG.png" alt="" class="h-7 w-10 mt-3">
+
+                    <i class="fa-regular fa-heart fa-1x mt-3 mr-4 cursor-pointer"></i>
+
+                    <img src="/icons/strawberry.png" alt="" class="absolute h-36 w-36 ml-10 mt-7 ">
+
+
+
+
+                    <div class="absolute bottom-3 px-5 mt-3">
+                        <p class="font-light">Strawberry</p>
+                        <h2 class="font-bold cursor-pointer">Farm fresh organic <br> strawberry 500g</h2>
+                        <h2 class="font-bold text-orange-500 mt-1 ">$11.00 <span
+                                class="font-semibold text-black text-xs">/kg</span></h2>
+
+
+
+
+
+                        <div class="mt-2 w-24  ">
+                            <button class="increment-decrement-btn bg-gray-300 text-black p-1  focus:outline-none"
+                                onclick="decrementQuantity()">-</button>
+                            <span id="quantity-display" class="font-semibold text-black text-xs mr-2">1</span>
+                            <button class="increment-decrement-btn bg-gray-300 text-black p-1  focus:outline-none"
+                                onclick="incrementQuantity()">+</button>
+
+                            <i class="fa-solid fa-cart-plus absolute right-0 h-16 cursor-pointer "></i>
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+                
+
+            </div>
+            <div class="px-16 mt-12 relative flex justify-evenly">
+                <div class="h-80 w-56 border-solid border-2 border-gray-200 rounded-lg flex justify-between bg-white">
+    
+    
+                    <img src="icons/25-Discount-PNG.png" alt="" class="h-7 w-10 mt-3">
+    
+                    <i class="fa-solid fa-heart fa-1x mt-3 mr-4 cursor-pointer" style="color: #f20202;"></i>
+    
+    
+                    <img src="/icons/mellon.png" alt="" class="absolute h-36 w-36 ml-10 mt-7 ">
+    
+    
+    
+    
+                    <div class="absolute bottom-3 px-5 mt-3">
+                        <p class="font-light">Water Mellon</p>
+                        <h2 class="font-bold cursor-pointer">Farm fresh organic <br> mellon 250g</h2>
+                        <h2 class="font-bold text-orange-500 mt-1 ">$7.99 <span
+                                class="font-semibold text-black text-xs">/kg</span></h2>
+    
+    
+    
+    
+    
+                        <div class="mt-2 w-24  ">
+                            <button class="increment-decrement-btn bg-gray-300 text-black p-1  focus:outline-none"
+                                onclick="decrementQuantity()">-</button>
+                            <span id="quantity-display" class="font-semibold text-black text-xs mr-2">1</span>
+                            <button class="increment-decrement-btn bg-gray-300 text-black p-1  focus:outline-none"
+                                onclick="incrementQuantity()">+</button>
+    
+                            <i class="fa-solid fa-cart-plus absolute right-0 h-16 cursor-pointer  "></i>
+                        </div>
+    
+    
+                    </div>
+    
+    
+    
+                </div>
+                <div class="h-80 w-56 border-solid border-2 border-gray-200 rounded-lg flex justify-between bg-white">
+    
+    
+                    <img src="icons/25-Discount-PNG.png" alt="" class="h-7 w-10 mt-3">
+    
+                    <i class="fa-regular fa-heart fa-1x mt-3 mr-4 cursor-pointer"></i>
+    
+                    <img src="/icons/coffee.png" alt="" class="absolute h-36 w-36 ml-7 mt-7 ">
+    
+    
+    
+    
+                    <div class="absolute bottom-3 px-5 mt-3">
+                        <p class="font-light">Coffee</p>
+                        <h2 class="font-bold cursor-pointer">Farm fresh organic <br> coffee 1kg</h2>
+                        <h2 class="font-bold text-orange-500 mt-1 ">$11.00 <span
+                                class="font-semibold text-black text-xs">/kg</span></h2>
+    
+    
+    
+    
+    
+                        <div class="mt-2 w-24  ">
+                            <button class="increment-decrement-btn bg-gray-300 text-black p-1  focus:outline-none"
+                                onclick="decrementQuantity()">-</button>
+                            <span id="quantity-display" class="font-semibold text-black text-xs mr-2">1</span>
+                            <button class="increment-decrement-btn bg-gray-300 text-black p-1  focus:outline-none"
+                                onclick="incrementQuantity()">+</button>
+    
+                            <i class="fa-solid fa-cart-plus absolute right-0 h-16 cursor-pointer"></i>
+                        </div>
+    
+    
+                    </div>
+    
+    
+    
+                </div>
+                <div class="h-80 w-56 border-solid border-2 border-gray-200 rounded-lg flex justify-between bg-white">
+    
+    
+                    <img src="icons/25-Discount-PNG.png" alt="" class="h-7 w-10 mt-3">
+    
+                    <i class="fa-regular fa-heart fa-1x mt-3 mr-4 cursor-pointer"></i>
+    
+                    <img src="/icons/dryfruits.png" alt="" class="absolute h-36 w-36 ml-8 mt-7 ">
+    
+    
+    
+    
+                    <div class="absolute bottom-3 px-5 mt-3">
+                        <p class="font-light">Dry Fruits</p>
+                        <h2 class="font-bold cursor-pointer">Farm fresh organic <br> dry 500g</h2>
+                        <h2 class="font-bold text-orange-500 mt-1 ">$11.00 <span
+                                class="font-semibold text-black text-xs">/kg</span></h2>
+    
+    
+    
+    
+    
+                        <div class="mt-2 w-24  ">
+                            <button class="increment-decrement-btn bg-gray-300 text-black p-1  focus:outline-none"
+                                onclick="decrementQuantity()">-</button>
+                            <span id="quantity-display" class="font-semibold text-black text-xs mr-2">1</span>
+                            <button class="increment-decrement-btn bg-gray-300 text-black p-1  focus:outline-none"
+                                onclick="incrementQuantity()">+</button>
+    
+                            <i class="fa-solid fa-cart-plus absolute right-0 h-16 cursor-pointer "></i>
+                        </div>
+    
+    
+                    </div>
+    
+    
+    
+                </div>
+                <div class="h-80 w-56 border-solid border-2 border-gray-200 rounded-lg flex justify-between bg-white">
+    
+    
+                    <img src="icons/25-Discount-PNG.png" alt="" class="h-7 w-10 mt-3">
+    
+                    <i class="fa-regular fa-heart fa-1x mt-3 mr-4 cursor-pointer"></i>
+    
+                    <img src="/icons/oil.png" alt="" class="absolute h-36 w-36 ml-10 mt-7 ">
+    
+    
+    
+    
+                    <div class="absolute bottom-3 px-5 mt-3">
+                        <p class="font-light">Hair Oil</p>
+                        <h2 class="font-bold cursor-pointer">Farm fresh organic <br> oil 500g</h2>
+                        <h2 class="font-bold text-orange-500 mt-1 ">$11.00 <span
+                                class="font-semibold text-black text-xs">/kg</span></h2>
+    
+    
+    
+    
+    
+                        <div class="mt-2 w-24  ">
+                            <button class="increment-decrement-btn bg-gray-300 text-black p-1  focus:outline-none"
+                                onclick="decrementQuantity()">-</button>
+                            <span id="quantity-display" class="font-semibold text-black text-xs mr-2">1</span>
+                            <button class="increment-decrement-btn bg-gray-300 text-black p-1  focus:outline-none"
+                                onclick="incrementQuantity()">+</button>
+    
+                            <i class="fa-solid fa-cart-plus absolute right-0 h-16 cursor-pointer "></i>
+                        </div>
+    
+    
+                    </div>
+    
+    
+    
+                </div>
+
+
+        </div>
+
+        <div class="mt-20 bg-white px-16 flex justify-center space-y-24 space-x-20">
+                <div class="mt-20">
+                    <img src="/icons/vegies.png" alt="">
+                </div>
+
+                <div class="max-w-96">
+                    <h6 class="text-green-700">About Us</h6>
+                    <h1 class="font-bold text-3xl">We Belive In Working With <br> Accredited Farmers</h1>
+                    <p class="mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia unde dolorem maxime quaerat recusandae id, quis repellendus consectetur nisi nemo veritatis aliquid vero velit repellat molestiae deleniti minima beatae temporibus.</p>
+                    <button type="button" class="mt-5 mb-16 text-white bg-green-600 hover:bg-emerald-900  font-semibold rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
+                        Choose plan
+                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                        </svg>
+                        </button>
+                </div>
+        </div>
+
+
+</body>
+
+</html>
